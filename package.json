@@ -1,0 +1,49 @@
+{
+  "name": "@vyr-e/mongo-vfs",
+  "version": "0.1.1",
+  "description": "just-bash filesystem backed by MongoDB for coding agents \u2014 bash explores, searchReplace and applyPatch send only what changed",
+  "license": "MIT",
+  "author": "Bethel Nzekea",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "agent",
+    "coding-agent",
+    "filesystem",
+    "virtual-filesystem",
+    "mongodb",
+    "just-bash",
+    "llm",
+    "search-replace",
+    "apply-patch",
+    "content-addressed"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest run && bun test test/bun_runtime_test.ts",
+    "measure": "tsx scripts/measure.ts"
+  },
+  "dependencies": {
+    "diff": "^8.0.2",
+    "just-bash": "3.6.0",
+    "mongodb": "^6.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
